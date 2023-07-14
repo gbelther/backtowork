@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import styles from "./caique.module.scss";
-import { Volume2 } from "lucide-react";
+import { MessageCircle, Volume2 } from "lucide-react";
 
 const backToWorkDate = new Date(2023, 7, 1, 9, 0, 0, 0);
 
@@ -97,6 +97,7 @@ export default function Caique() {
             animationAudio ? styles.audioAnimation : ""
           }`}
         />
+        {animationAudio && <div className={styles.chatBalon}>O canalha!!</div>}
       </div>
 
       <section className={styles.butttons}>
