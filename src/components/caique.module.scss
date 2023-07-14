@@ -1,0 +1,113 @@
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes audioAnimation {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.content {
+  color: rgb(246, 243, 243);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  font-size: 1rem;
+
+  i {
+    color: red;
+    width: 1rem;
+    height: 1rem;
+  }
+
+  audio {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.counter {
+  border: 1px solid white;
+
+  th,
+  td {
+    padding: 2px 4px;
+    text-align: center;
+  }
+
+  th {
+    font-weight: 500;
+  }
+
+  td {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+}
+
+.rotate {
+  animation: rotate 0.5s linear infinite;
+}
+
+.image {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+.volumeOn {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.audioAnimation {
+  display: block;
+  animation: audioAnimation 0.5s ease-in-out infinite;
+}
+
+.butttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  button {
+    font-size: 1.25rem;
+    font-weight: 700;
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:first-child {
+      border-color: red;
+      background-color: red;
+    }
+
+    &:last-child {
+      border-color: greenyellow;
+      background-color: greenyellow;
+    }
+
+    &:hover {
+      filter: brightness(0.7);
+    }
+  }
+}
